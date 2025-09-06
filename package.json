@@ -6,8 +6,8 @@
         "node": "20.x"
     },
     "scripts": {
-        "start": "npx rsbuild dev -o",
-        "build": "npm install && npx rsbuild build",
+        "start": "npx @rsbuild/core dev -o",
+        "build": "npm install && npx @rsbuild/core build",
         "watch": "npx rsbuild build --watch",
         "serve": "http-server dist -p 8443 -a localhost -o",
         "test:lint": "prettier --log-level silent --write . && eslint \"./src/**/*.?(js|jsx|ts|tsx)\"",
