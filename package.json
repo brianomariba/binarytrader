@@ -6,13 +6,15 @@
         "node": "20.x"
     },
     "scripts": {
-        "start": "vite dev",
-        "build": "npm install && npm install -g vite @vitejs/plugin-react && npx vite build",
+        "start": "npx rsbuild dev -o",
+        "build": "npm install && npx rsbuild build",
+        "watch": "npx rsbuild build --watch",
         "serve": "http-server dist -p 8443 -a localhost -o",
         "test:lint": "prettier --log-level silent --write . && eslint \"./src/**/*.?(js|jsx|ts|tsx)\"",
         "test:fix": "prettier --log-level silent --write . && eslint --fix \"./src/**/*.?(js|jsx|ts|tsx)\"",
         "test": "jest",
-        "coverage": "jest --coverage"
+        "coverage": "jest --coverage",
+        "build:analyze": "BUNDLE_ANALYZE=true rsbuild build"
     },
     "dependencies": {
         "@datadog/browser-rum": "^5.31.1",
