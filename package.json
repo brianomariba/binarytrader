@@ -7,7 +7,8 @@
     },
     "scripts": {
         "start": "npx rsbuild dev -o",
-        "build": "npm install && npm install -g webpack webpack-cli html-webpack-plugin copy-webpack-plugin && webpack --config webpack.config.js",
+        "build": "npm install && npm run build:vite",
+        "build:vite": "vite build",
         "watch": "npx rsbuild build --watch",
         "serve": "http-server dist -p 8443 -a localhost -o",
         "start:webpack": "webpack serve --open --config webpack.config.js",
@@ -112,6 +113,7 @@
         "@types/uuid": "^10.0.0",
         "@typescript-eslint/eslint-plugin": "^6.21.0",
         "@typescript-eslint/parser": "^6.0.0",
+        "@vitejs/plugin-react": "^5.0.2",
         "babel-core": "^7.0.0-bridge.0",
         "babel-jest": "^29.7.0",
         "babel-loader": "^8.1.0",
@@ -155,6 +157,7 @@
         "tsconfig-paths-webpack-plugin": "^4.1.0",
         "typescript": "^5.5.3",
         "url": "^0.11.3",
+        "vite": "^7.1.4",
         "webpack": "^5.92.1",
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^5.1.0"
