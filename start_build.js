@@ -102,6 +102,16 @@ async function main() {
                             exclude: /node_modules/,
                             use: 'raw-loader',
                         },
+                        {
+                            test: /\.js$/,
+                            exclude: /node_modules/,
+                            use: {
+                                loader: 'babel-loader',
+                                options: {
+                                    presets: ['@babel/preset-react'],
+                                },
+                            },
+                        },
                     ],
                 },
             },
