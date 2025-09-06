@@ -11,12 +11,11 @@
         "watch": "npx rsbuild build --watch",
         "serve": "http-server dist -p 8443 -a localhost -o",
         "start:webpack": "webpack serve --open --config webpack.config.js",
-        "build:webpack": "npx webpack --config webpack.config.js",
+        "build:webpack": "./node_modules/.bin/webpack --config webpack.config.js",
         "test:lint": "prettier --log-level silent --write . && eslint \"./src/**/*.?(js|jsx|ts|tsx)\"",
         "test:fix": "prettier --log-level silent --write . && eslint --fix \"./src/**/*.?(js|jsx|ts|tsx)\"",
         "test": "jest",
         "coverage": "jest --coverage",
-        "prepare": "npx husky install",
         "build:analyze": "BUNDLE_ANALYZE=true rsbuild build"
     },
     "dependencies": {
