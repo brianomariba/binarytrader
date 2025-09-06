@@ -7,7 +7,7 @@
     },
     "scripts": {
         "start": "npx rsbuild dev -o",
-        "build": "npm install && npm install -g webpack webpack-cli && webpack --config webpack.config.js",
+        "build": "npm install && npm install -g webpack webpack-cli html-webpack-plugin copy-webpack-plugin && webpack --config webpack.config.js",
         "watch": "npx rsbuild build --watch",
         "serve": "http-server dist -p 8443 -a localhost -o",
         "start:webpack": "webpack serve --open --config webpack.config.js",
