@@ -1,7 +1,7 @@
-import { defineConfig } from '@rsbuild/core';
-import { pluginReact } from '@rsbuild/plugin-react';
-import { pluginSass } from '@rsbuild/plugin-sass';
-import { pluginBasicSsl } from '@rsbuild/plugin-basic-ssl';
+const { defineConfig } = require('@rsbuild/core');
+const { pluginReact } = require('@rsbuild/plugin-react');
+const { pluginSass } = require('@rsbuild/plugin-sass');
+const { pluginBasicSsl } = require('@rsbuild/plugin-basic-ssl');
 
 const path = require('path');
 
