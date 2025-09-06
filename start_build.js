@@ -19,7 +19,7 @@ async function main() {
         ],
         source: {
             entry: {
-                index: './src/main.tsx',
+                index: './src/index.tsx',
             },
             define: {
                 'process.env': {
