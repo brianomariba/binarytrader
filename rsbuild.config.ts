@@ -1,13 +1,8 @@
-const { defineConfig } = require('@rsbuild/core');
-const { pluginReact } = require('@rsbuild/plugin-react');
-const { pluginSass } = require('@rsbuild/plugin-sass');
-const { pluginBasicSsl } = require('@rsbuild/plugin-basic-ssl');
-
 const path = require('path');
 
-export default defineConfig({
+module.exports = {
     plugins: [
-        pluginSass({
+        require('@rsbuild/plugin-sass')({
             sassLoaderOptions: {
                 sourceMap: true,
                 sassOptions: {
@@ -17,8 +12,8 @@ export default defineConfig({
             },
             exclude: /node_modules/,
         }),
-        pluginReact(),
-        pluginBasicSsl(),
+        require('@rsbuild/plugin-react')(),
+        require('@rsbuild/plugin-basic-ssl')(),
     ],
     source: {
         entry: {
@@ -106,4 +101,4 @@ export default defineConfig({
             },
         },
     },
-});
+};
