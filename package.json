@@ -7,7 +7,7 @@
     },
     "scripts": {
         "start": "npx @rsbuild/core dev -o",
-        "build": "npm ci && RSPACK_CLI_TS_NODE=0 npx @rsbuild/core build",
+        "build": "RSPACK_CLI_TS_NODE=0 npx @rsbuild/core build",
         "watch": "npx rsbuild build --watch",
         "serve": "http-server dist -p 8443 -a localhost -o",
         "test:lint": "prettier --log-level silent --write . && eslint \"./src/**/*.?(js|jsx|ts|tsx)\"",
