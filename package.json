@@ -6,9 +6,9 @@
         "node": "20.x"
     },
     "scripts": {
-        "start": "rsbuild dev -o",
-        "build": "rsbuild build",
-        "watch": "rsbuild build --watch",
+        "start": "npx rsbuild dev -o",
+        "build": "npx rsbuild build",
+        "watch": "npx rsbuild build --watch",
         "serve": "http-server dist -p 8443 -a localhost -o",
         "start:webpack": "webpack serve --open --config webpack.config.js",
         "build:webpack": "webpack --config webpack.config.js",
